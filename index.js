@@ -4,6 +4,7 @@ const {listContacts, getContactById, addContact,
     removeContact,} = require('./contacts')
 
 const program = new Command();
+
 program
   .option('-a, --action <type>', 'choose action')
   .option('-i, --id <type>', 'user id')
@@ -14,7 +15,6 @@ program
 program.parse(process.argv);
 
 const argv = program.opts();
-
 
 (async ({ action, id, name, email, phone }) => {
     try {

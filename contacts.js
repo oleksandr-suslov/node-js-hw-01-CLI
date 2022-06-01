@@ -11,8 +11,7 @@ const readData = async () => {
   return JSON.parse(result);
 };
 
-const listContacts = async () => {
-  return await readData();
+const listContacts = async () => {return await readData();
 };
 
 const getContactById = async(contactId) => {
